@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <title>Anlegen eines Seminars</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/logo.png" />
+  <link rel="stylesheet" type="text/css" href="css/grid.css">
+</head>
+
+<body>
+  <div id="container">
+    <header id="kopf">
+      <div id="TitelAndLogo">
+        <%- include("includes/headerFig") %>
+        <h1>Anlegen eines Seminars</h1>
+      </div>
+    </header>
+
+    <%- include("includes/nav") %>
+
+
+    <main id="inhalt">
+      <form method="POST" action="https://labs.inf.fh-dortmund.de/roomReservationService/testCreateReservation.php">
+
+        <fieldset>
+          <legend>Anlegen einer Buchung</legend>
+
+          <p class="erforderlicheEingabe">
+            <label for="raumeNummer"> Nummer des zu buchenden Raumes:</label>
+            <select id="raumeNummer" name="roomno" autofocus required>
+              <option value="">Wählen Sie aus</option>
+              <optgroup label="EF 42">
+                <option value="A.E.01">A.E.01</option>
+                <option value="B.2.20">B.2.20</option>
+              </optgroup>
+              <optgroup label="Sonnenstraße 96">
+                <option value="C.3.02">C.3.02</option>
+              </optgroup>
+            </select>
+          </p>
+
+          <p class="erforderlicheEingabe">
+            <label for="buchungsBezeichnung">Bezeichnung der Buchung:</label>
+            <input id="buchungsBezeichnung" name="restitle" type="text" placeholder="z.B.: Projekt foo, workshop"
+              maxlength="20" required />
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Zeit</legend>
+          <p class="erforderlicheEingabe">
+            <label for="datum">Datum und Uhrzeit:</label>
+            <input id="datum" name="resdate" type="date" required />
+          </p>
+
+          <p class="erforderlicheEingabe">
+            <label for="startuhrzeit">Startuhrzeit:</label>
+            <input id="startuhrzeit" name="resstart" type="time" min="08:00" max="21:00" required />
+          </p>
+
+          <p class="erforderlicheEingabe">
+            <label for="enduhrzeit">Enduhrzeit:</label>
+            <input id="enduhrzeit" name="resend" type="time" min="08:00" max="22:00" required />
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Weitere Eingaben</legend>
+
+          <p>
+            <label for="person">Person</label>
+            <select id="person" name="resperson">
+              <option value="amer">Aamer</option>
+              <option value="zakaria">Zakaria</option>
+              <option value="stephan">Stephan</option>
+            </select>
+          </p>
+
+          <p>
+            <label>Anzahl der Teilnehmern:</label>
+            <input id="anzahlTeilnehmern" name="resparticipants" type="number" placeholder="0" />
+          </p>
+
+          <p>
+            <label for="buchungsBeschreibung">Beschreibung der Buchung:</label>
+            <br />
+            <textarea id="buchungsBeschreibung" name="resdescription" cols="60" rows="8" maxlength="500"></textarea>
+          </p>
+          <input type="submit" />
+        </fieldset>
+
+      </form>
+    </main>
+    <hr />
+
+    <%- include("includes/aside") %>
+    <%- include("includes/footer") %>
+
+  </div>
+</body>
+
+</html>

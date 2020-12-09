@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Detailseite zur Buchung</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/logo.png" />
+    <link rel="stylesheet" type="text/css" href="css/flexbox.css">
+</head>
+
+<body id="ContainerRED">
+    <header id="TitelAndLogo">
+        <%- include("includes/headerFig") %>
+        <h1>A.E.01 Raumbuchung</h1>
+    </header>
+
+    <%- include("includes/nav") %>
+
+    <div id="ContainerGREEN">
+
+        <main id="ContainerBLUE">
+            <section>
+                <h3>Buchung Informationen</h3>
+                <ul>
+                    <li>Bezeichnung: A.E.01</li>
+                    <li>Datum: 2019.09.19</li>
+                    <li>Zeitraum: von: 14:00 , bis: 16:00 </li>
+                    <li>Gebucht von: <a href="mailto:mhd.dalloul001@stud.fh-dortmund.de"> Amer Dalloul</a></li>
+                    <li>Anzahl der Teilnehmer: 4</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Buchung Beschreibung</h3>
+                <p>
+                    Informationen zur Buchung: Bezeichnung, Datum, Zeitraum (Start und Ende als Uhrzeit),
+                    Gebucht von (Name einer Person), Anzahl der Teilnehmer
+                    2. Beschreibung der Buchung: Ein (ggf. längerer!) Text, der die Buchung (bzw. geplante
+                    Veranstaltung) beschreibt. TO DO
+                </p>
+            </section>
+
+        </main>
+
+        <%- include("includes/aside") %>
+    </div>
+    <%- include("includes/footer") %>
+</body>
+
+</html>

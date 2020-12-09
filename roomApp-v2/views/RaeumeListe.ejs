@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Liste der verfügbaren Räume</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/flexbox.css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/logo.png" />
+</head>
+
+<body id="ContainerRED">
+    <header>
+        <div id="TitelAndLogo">
+            <%- include("includes/headerFig") %>
+            <h1>Liste der verfügbaren Räume</h1>
+        </div>
+    </header>
+
+    <%- include("includes/nav") %>
+
+    <div id="ContainerGREEN">
+        <main id="ContainerBLUE">
+            <form action="https://labs.inf.fh-dortmund.de/roomReservationService/testRoomSearch.php" method="GET">
+                <fieldset>
+                    <legend>Suchen nach Räumen</legend>
+                    <label for="raeumeSuche"></label>
+                    <input id="raeumeSuche" list="dataRaeumeSuche" name="roomno"
+                        pattern="[A-Z][\.]([E1-3])[\.]{1}[0-9]{2}" />
+                    <datalist id="dataRaeumeSuche">
+                        <option value="A.E.01">
+                        <option value="B.2.20">
+                        <option value="C.3.02">
+                    </datalist>
+
+                    <input type="submit" value="finden" />
+                </fieldset>
+            </form>
+
+            <ol>
+
+                <% for (let ite of raeumeList) { %>
+                <li>
+                    <a href="Raumdetails">Raum: <%= ite.nummer %></a>
+                    <ul>
+                        <li>Bezeichnung: <%= ite.bezeichnung %></li>
+                        <li>Gebaeude: <%= ite.gebaeude %></li>
+                        <li>Kapazitaet: <%= ite.kapazitaet %></li>
+                        <li>Ausstattungsmerkmale: <%= ite.ausstattungsmerkmale %></li>
+                    </ul>
+                </li>
+                <% } %>
+
+            </ol>
+
+        </main>
+
+        <%- include("includes/aside") %>
+    </div>
+    <%- include("includes/footer") %>
+</body>
+
+</html>

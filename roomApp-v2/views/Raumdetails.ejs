@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <title>Raumdetails</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/logo.png" />
+  <link rel="stylesheet" type="text/css" href="css/grid.css">
+</head>
+
+<body>
+  <div id="container">
+    <header id="kopf">
+      <div id="TitelAndLogo">
+        <%- include("includes/headerFig") %>
+        <h1>A.E.01 Raumdetails</h1>
+      </div>
+    </header>
+
+    <%- include("includes/nav") %>
+
+    <main id="inhalt">
+      <div id="inhaltRD">
+        <section id="RaumInfos">
+          <h3>Raum Informationen</h3>
+          <ul id="Raumdynamisch">
+
+          </ul>
+        </section>
+
+        <div id="hoersaalIMG">
+          <figure>
+            <img src="assets/AE01.jpg" alt="AE01 Hörsaal Bild" />
+            <figcaption>
+              <small>AE01 Hörsaal</small>
+            </figcaption>
+          </figure>
+        </div>
+
+        <section id="listDerBuchungen">
+          <h3>Raum Buchung</h3>
+          <table>
+            <thead>
+              <tr id="thead4Plan">
+                <th>Datum</th>
+                <th>Startuhrzeit</th>
+                <th>Enduhrzeit</th>
+                <th>Bezeichnung</th>
+              </tr>
+            </thead>
+
+            <tbody id="tbody4Plan">
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </main>
+
+    <%- include("includes/aside") %>
+    <%- include("includes/footer") %>
+  </div>
+  <script src='js/Script.js'></script>
+</body>
+
+</html>
