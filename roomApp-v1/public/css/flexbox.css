@@ -1,0 +1,26 @@
+#ContainerRED{
+    display: flex;
+    flex-direction: column;
+    /*red*/
+}
+#ContainerGREEN{
+    display: flex;
+    /*green*/
+}
+@media screen and (max-width:768px) and (orientation:portrait) {
+    /* Für kleinere Viewports werden die Elemente im Flex-Container
+       untereinander angezeigt */
+    #ContainerGREEN {
+        flex-direction: column;
+    }
+}
+
+#ContainerBLUE{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 70%;
+    /*blue*/
+}
+aside{
+    flex-basis: 30%;
+}

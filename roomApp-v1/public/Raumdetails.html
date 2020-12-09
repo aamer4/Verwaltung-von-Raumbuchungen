@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <title>Raumdetails</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="img/logo.png" />
+  <link rel="stylesheet" type="text/css" href="css/grid.css">
+</head>
+
+<body>
+  <div id="container">
+    <header id="kopf">
+      <div id="TitelAndLogo">
+        <figure>
+          <a href="Dashboard.html">
+            <img src="img/logo.png" alt="FH Dortmund logo" width="40" />
+          </a>
+        </figure>
+        <h1>A.E.01 Raumdetails</h1>
+      </div>
+    </header>
+
+    <nav id="navi">
+      <ul>
+        <li><a href="../RaeumeListe.html">Liste der verfügbaren Räume</a></li>
+        <li> | </li>
+        <li><a href="Buchungsdetails.html">Buchungsdetails</a></li>
+        <li> | </li>
+        <li><a href="Seminar_Anlegen.html">Anlegen eines Seminars</a></li>
+      </ul>
+      <hr />
+    </nav>
+
+
+    <main id="inhalt">
+      <!--ich hab section tag geloescht P08-->
+      <div id="inhaltRD">
+        <section id="RaumInfos">
+          <h3>Raum Informationen</h3>
+          <ul id="Raumdynamisch">
+            
+          </ul>
+        </section>
+
+        <div id="hoersaalIMG">
+          <figure>
+            <img src="img/AE01.jpg" alt="AE01 Hörsaal Bild"/>
+            <figcaption>
+              <small>AE01 Hörsaal</small>
+            </figcaption>
+          </figure>
+        </div>
+
+
+        <section id="listDerBuchungen">
+          <h3>Raum Buchung</h3>
+          <table>
+            <thead>
+              <tr id="thead4Plan">
+                <th>Datum</th>
+                <th>Startuhrzeit</th>
+                <th>Enduhrzeit</th>
+                <th>Bezeichnung</th>
+              </tr>
+            </thead>
+
+            <tbody id="tbody4Plan">
+              <!--war class-->
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </main>
+
+    <!--<hr />-->
+
+    <aside id="zusatz">
+      <h4>Zusatzinformationen</h4>
+      <ul>
+        <li>
+          <a href="https://www.fh-dortmund.de/de/index.php">FH Dortmund Homepage</a>
+        </li>
+        <li>Support</li>
+        <li>zuletzt geändert am: 30.11.2019</li>
+      </ul>
+    </aside>
+
+    <footer id="fuss">
+      <small>&copy; Aamer</small>
+    </footer>
+  </div>
+  <script src='js/Script.js'></script>
+</body>
+
+</html>

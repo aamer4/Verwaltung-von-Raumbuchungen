@@ -1,0 +1,71 @@
+/*start: fuer Raum Details*/
+#RaumInfos {
+    grid-area: RaumInfos;
+}    
+#hoersaalIMG { 
+    grid-area: hoersaalIMG;
+}   
+#listDerBuchungen { 
+    grid-area: listDerBuchungen;
+}
+
+#inhaltRD{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto;
+    align-items: center;
+    grid-gap: 0.5em;
+    grid-template-areas:"RaumInfos hoersaalIMG"
+                        "listDerBuchungen hoersaalIMG";
+}
+
+@media screen and (max-width:480px) and (orientation:portrait){
+    #inhaltRD{
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+        grid-template-areas:"RaumInfos"
+                            "listDerBuchungen"
+                            "hoersaalIMG";
+    }
+}
+
+
+
+/*fuer Raum Details end;*/
+
+#kopf {
+    grid-area: kopf;
+}    
+#navi { 
+    grid-area: navi; 
+}   
+#inhalt { 
+    grid-area: inhalt;
+}
+#zusatz { 
+    grid-area: zusatz;
+}
+#fuss { 
+    grid-area: fuss;
+}
+#container{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto 25%;
+    grid-gap: 1em;
+    grid-template-areas:"kopf kopf"
+                        "navi navi"
+                        "inhalt zusatz"
+                        "fuss fuss";
+}
+@media screen and (max-width:768px) and (orientation:portrait){
+    #container{
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-columns: auto;
+        grid-template-areas:"kopf kopf"
+                            "navi navi"
+                            "inhalt inhalt"
+                            "zusatz zusatz"
+                            "fuss fuss";
+    }
+}

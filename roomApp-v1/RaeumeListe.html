@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <title>Liste der verfügbaren Räume</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/flexbox.css">
+  <link rel="shortcut icon" type="image/x-icon" href="img/logo.png" />
+  <script src='js/Script.js'></script>
+</head>
+
+<body id="ContainerRED">
+    <header>
+      <div id="TitelAndLogo">
+        <figure>
+          <a href="Dashboard.html">
+            <img src="img/logo.png" alt="FH Dortmund logo" width="40" />
+          </a>
+        </figure>
+        <h1>Liste der verfügbaren Räume</h1>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="Raumdetails.html">Raumdetails</a></li>
+        <li> | </li>
+        <li><a href="Buchungsdetails.html">Buchungsdetails</a></li>
+        <li> | </li>
+        <li><a href="Seminar_Anlegen.html">Anlegen eines Seminars</a></li>
+      </ul>
+      <hr />
+    </nav>
+
+    <div id="ContainerGREEN">
+        <main id="ContainerBLUE">
+          <form action="https://labs.inf.fh-dortmund.de/roomReservationService/testRoomSearch.php" method="GET">
+            <fieldset>
+              <legend>Suchen nach Räumen</legend>
+              <label for="raeumeSuche"></label>
+              <input id="raeumeSuche" list="dataRaeumeSuche" name="roomno" pattern="[A-Z][\.]([E1-3])[\.]{1}[0-9]{2}" />
+              <datalist id="dataRaeumeSuche">
+                <option value="A.E.01">
+                <option value="B.2.20">
+                <option value="C.3.02">
+              </datalist>
+
+              <input type="submit" value="finden" />
+            </fieldset>
+          </form>
+
+          <ol>
+            <li>
+              <a href="Raumdetails.html">Raum 1</a>
+              <ul>
+                <li>A.E.01</li>
+                <li>Hörsaal</li>
+                <li>EF 42</li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="Raumdetails.html">Raum 2</a>
+              <ul>
+                <li>B.2.20</li>
+                <li>Computerraum</li>
+                <li>EF 42</li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="Raumdetails.html">Raum 3</a>
+              <ul>
+                <li>C.3.02</li>
+                <li>Besprechungsraum</li>
+                <li>Sonnenstraße 96</li>
+              </ul>
+            </li>
+          </ol>
+        </main>
+
+      <aside>
+        <h4>Zusatzinformationen</h4>
+        <ul>
+          <li>
+            <a href="https://www.fh-dortmund.de/de/index.php">FH Dortmund Homepage</a>
+          </li>
+          <li>Support</li>
+          <li>zuletzt geändert am: 30.11.2019</li>
+        </ul>
+      </aside>
+
+    </div>
+
+    <footer>
+      <small>&copy; Aamer</small>
+    </footer>
+</body>
+
+</html>
