@@ -1,0 +1,178 @@
+/*alle*/
+*{
+    font-family: Helvetica,Arial,sans-serif;
+}
+html,body{
+    min-height: 100%;
+}
+body{
+    background: linear-gradient(311deg, rgba(255,102,0,1) 0%, rgba(222,226,231,1) 62%);
+}
+
+h1{
+    color: rgb(255, 102, 0);
+    text-shadow: 3px -3px 3px rgba(0, 0, 255, .2);
+    letter-spacing: 3px;
+}
+h3{
+    color: rgb(35, 105, 66);
+    margin-top: 5px;
+}
+h4{
+color: lightslategray;
+}
+/*alle*/
+
+/*start: für Seminar anlegen*/
+/*
+ pseudo-classes (such as :hover, :focus, :active) and
+ pseudo-elements (such as ::before, ::after, ::first-line).
+*/
+
+input:not([type="submit"]):valid{
+    background-color: rgb(98, 235, 114);
+}
+
+input:invalid{
+   background-color: rgb(255, 56, 56);
+}
+
+input:required,select:required{
+    border: 3px solid;
+}
+
+.erforderlicheEingabe::after{
+    content: " (erforderliche Eingabe) ";
+    font-size: 0.8em;
+}
+/*für Seminar anlegen end;*/
+
+
+/*alle*/
+aside{
+    padding: 3px;
+    margin: 3px;
+    border: 2px dotted;
+    border-radius: 8px;
+    background-color: whitesmoke ;
+}
+
+
+
+/*Raumdetails*/
+/* tr zeile */
+/* td th eintraege */
+#thead4Plan{
+    background-color: rgb(131, 153, 179);
+    color: white;
+}
+.tbody4Plan > :nth-last-of-type(odd){
+    background-color: rgb(186, 197, 137);
+}
+table {
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+/*Raumdetails*/
+
+/*Buchungsdetails*/
+[href*="mailto"]::before{
+    content: url('../assets/letterSmall.png') ;
+    /*live server ok , ausser ausgeblendet*/
+}
+
+/*Seminar anlegen und Räumeliste*/
+legend{
+    font-family: cursive;
+    padding: 5px;
+    font-size: small;
+    color: white;
+    background-color: rgb(255, 101, 1);
+    box-shadow: 10px 5px 5px black;
+    border-radius: 5px;
+}
+fieldset{
+    font-family: cursive;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+}
+/*Seminar anlegen und Räumeliste*/
+
+/*Buchungsdetails und Raumdetails*/
+section{
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+    margin-top: 5px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+}
+
+/*alle*/
+nav>ul{
+    list-style-type:none;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin: 0;
+    padding-left: 0px;
+}
+nav>ul>li{
+    margin: 5px;
+}
+nav a{
+    color: black;
+    text-decoration: none;
+}
+nav a:hover{
+    background-color: rgb(255, 101, 1);
+    color: white;
+}
+#TitelAndLogo{
+    display: flex;
+    align-items: center; 
+}
+
+@media screen and (max-width:768px) and (orientation:portrait){
+    h1{
+        font-size: small;
+    }
+}
+
+@media screen and (max-width:480px) and (orientation:portrait){
+    h1{
+        display: none;
+    }
+}
+
+
+
+
+footer{
+    position: sticky;
+    bottom: 0px;
+}
+
+#hoersaalIMG img { 
+    max-width: 100%;
+    min-width: 185px;
+    height: auto;
+  }
+/*alle*/
+
+/* Aufgabe 2 P07*/
+/*
+keine gute Oppition -> es wird ein leerraum entstehen
+    position: relative;
+    left: 200px;
+    bottom: 120px;
+    margin-bottom: 0px;
+
+#RaumInfos{
+    display: flex;
+}*/
+
+/* Aufgabe 2 P07*/
+/*zuletzt geändert am: 30.11.2019 */
